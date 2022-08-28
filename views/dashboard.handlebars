@@ -1,6 +1,6 @@
 {{#if posts.length}}
 
-<h3>{{user.username}}'s Posts</h3>
+<h3>Your Posts</h3>
 {{#each posts as |post|}}
   <ul class="list">
     <li class="list-item">{{> post-info post }}</li>
@@ -9,6 +9,4 @@
 
 {{/if}}
 
-<button type="submit" class="new-post-btn"><a class="link" href="/dashboard/new">Add New Post</a></button>
-
-<script src="/js/newPost.js"></script>
+<button type="submit" class="new-post-btn"><a class="link" href="/dashboard/new-post">Add New Post</a></button>

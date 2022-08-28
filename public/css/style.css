@@ -116,6 +116,7 @@ span {
 form {
     display: block;
     padding: 5%;
+    margin: 0;
 }
 
 label {
@@ -159,6 +160,10 @@ button:hover {
 	outline: inherit;
 }
 
+.login-instructions {
+    font-size: 1rem;
+    margin: 0;
+}
 footer {
     border-top: 1px solid #ccc;
     display: flex;

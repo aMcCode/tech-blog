@@ -39,6 +39,10 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+router.get('/new-post', withAuth, (req, res) => {
+  res.render('new-post', { loggedIn:true });
+});
+
 router.get('/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
@@ -67,7 +71,7 @@ router.get('/:id', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this id' });
+        res.status(404).json({ message: 'No post found with this id @ GET dashboard' });
         return;
       }
       const post = dbPostData.get({ plain: true });
@@ -78,5 +82,6 @@ router.get('/:id', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 module.exports = router;
