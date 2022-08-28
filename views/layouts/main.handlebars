@@ -1,0 +1,44 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Tech-Blog</title>
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="/css/skeleton.css">
+      <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+    <div class="u-full-width">
+    <div class="page-header">
+      <nav>
+        <a href="/">Home</a>
+        {{#if loggedIn}}
+        <a href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <a href="/login">Login to Dashboard</a>
+        <a href="/signup">Sign-up</a>
+        {{/if}}
+      </nav>
+      <h1>
+        <a href="/"><h1>The Tech Blog</h1></a>
+      </h1>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        {{{ body }}}
+      </div>
+
+    </div>
+
+<footer>Thanks for visiting!</footer>
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+</body>
+</html>
