@@ -13,9 +13,9 @@ router.get('/', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
   Comment.create({
-    comment_text: req.body.comment_text,
-    user_id: req.session.user_id,
-    post_id: req.body.post_id
+    comment: req.body.comment,
+    post_id: req.body.post_id,
+    user_id: req.session.user_id
   })
     .then(dbCommentData => res.json(dbCommentData))
     .catch(err => {
@@ -24,11 +24,12 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
+
 router.put('/:id', withAuth, (req, res) => {
   if (req.session) {
       Comment.update(
           {
-              comment_text: req.body.comment_text
+              comment: req.body.comment
           },
           {
               where: {
