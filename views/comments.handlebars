@@ -1,0 +1,37 @@
+<div class="u-full-width">
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+
+<form id="comment-form">
+    <h3 id="comments-h3">Add Comments</h3>
+  <div>
+    <p>post created by {{post.user.username}} on {{format_date post.created_at}}</p>
+    <label for="title">Title</label>
+    <input class="no-border" type="text" id="title" name="title" value="{{post.title}}" readonly/>
+  </div>
+  <div>
+    <label for="post-content">Content</label>
+    <textarea class="no-border" id="post-content" name="content" readonly>{{post.content}}</textarea>
+  </div>
+  <div>
+    {{#each post.comments as |comment|}}
+          <p>Comment by {{user.username}} on {{format_date comment.created_at}}</p>
+          <textarea class="comment">{{comment.comment}}</textarea>
+          <button class="update-comment-btn" type="submit" comment-id='{{comment.id}}' post-id='{{post.id}}'>Update Comment</button>
+          <button class="delete-comment-btn" type="button" cancel-id='{{comment.id}}' post-id='{{post.id}}'>Delete Comment</button>
+    {{/each}}
+  </div>
+  <div>
+    <button id="add-new-comment-btn" type="submit" class="new-comment-btn" post-id='{{post.id}}'>Add New Comment</button>
+  </div>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+<script src="/js/addComment.js"></script>
+
+{{!-- need to get user logged in and only show buttons when user id = commenter id.  --}}
+{{!-- Also need to update add comment to go back to post where comment was added instead of to the dashboard. --}}
