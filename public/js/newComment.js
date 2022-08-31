@@ -19,13 +19,10 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/post/'+post_id);
     } else {
       alert(response.statusText);
     }
   };
   
 document.querySelector('#new-comment-form').addEventListener('submit', newFormHandler);
-
-// SEE THIS LINK: https://code-boxx.com/pass-variables-between-pages-javascript/
-//STILL NEED TO REMOVE SESSION STORAGE
