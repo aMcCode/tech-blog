@@ -1,5 +1,12 @@
-<div class="twelve columns">
-    <div class="card-header">
-       <div class="comment-title"><h2><a class="comment-link" href="/post/{{id}}">{{post.comments}}</a></h2></div>
-    </div>
-</div>
+    {{#each post.comments as |comment|}}
+    <div id='comment-div'>
+      <p>Comment by {{comment.user.username}} on {{format_date comment.created_at}}</p>
+    {{#if (isUsersObj user.username ../authName)}}
+      <textarea comment-id={{comment.id}} post-id='{{../post.id}}' class="editable-comment">{{comment.comment}}</textarea>
+      <button type="submit" id="update-comment-btn" comment-id='{{comment.id}}' post-id='{{../post.id}}'>Update Comment</button>
+      <button class="delete-comment-btn" cancel-id='{{comment.id}}' post-id='{{../post.id}}'>Delete Comment</button>
+    {{else}}
+      <textarea class="comment" readonly>{{comment.comment}}</textarea>
+      </div>
+    {{/if}}
+    {{/each}}

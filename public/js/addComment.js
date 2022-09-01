@@ -1,7 +1,5 @@
-console.log("in comments.js")
-
-function newFormHandler(event) {
-    event.preventDefault();
+async function newFormHandler(event) {
+  event.preventDefault();
   
     console.log('got event handler')
 
@@ -13,4 +11,4 @@ function newFormHandler(event) {
     document.location.replace('/new-comment');
   };
   
-document.querySelector('#comment-form').addEventListener('submit', newFormHandler);
+document.querySelector('#add-new-comment-btn').addEventListener('click', newFormHandler);
