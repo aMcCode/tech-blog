@@ -6,8 +6,6 @@ async function updateComment(event) {
     const commentId = text_area.getAttribute('comment-id');
     const postId = text_area.getAttribute('post-id');
 
-    newCommentButton.style.display = 'none';
-
     // console.log(comment);
     // console.log(commentId);
     // console.log(postId);
@@ -23,12 +21,11 @@ async function updateComment(event) {
       });
 
       if (response.ok) {
-        console.log("comment edited");
+        //console.log("comment edited");
       } else {
         alert(response.statusText);
       }
 
-    // document.location.replace('/post/'+postId);
   };
 
 document.querySelector('.comment-update-btn').addEventListener('click', updateComment);

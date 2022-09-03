@@ -1,4 +1,5 @@
-async function newFormHandler(event) {
+
+function newFormHandler(event) {
   event.preventDefault();
 
     console.log('got event handler')
@@ -9,6 +10,7 @@ async function newFormHandler(event) {
     sessionStorage.setItem("postId", postId);
 
     document.location.replace('/new-comment');
-  };
+};
+
 
 document.querySelector('#add-new-comment-btn').addEventListener('click', newFormHandler);
