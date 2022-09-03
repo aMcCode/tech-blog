@@ -26,7 +26,6 @@ async function updateComment(event) {
         alert(response.statusText);
       }
 
-    // document.location.replace('/post/'+postId);
   };
 
 document.querySelector('.comment-update-btn').addEventListener('click', updateComment);

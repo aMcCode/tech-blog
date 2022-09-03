@@ -57,11 +57,6 @@ const commentdata = [
     post_id: 14
   },
   {
-    comment: 'Donec ut mauris eget massa tempor convallis.',
-    user_id: 5,
-    post_id: 4
-  },
-  {
     comment:
       'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
     user_id: 4,
@@ -139,11 +134,6 @@ const commentdata = [
     post_id: 3
   },
   {
-    comment: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-    user_id: 1,
-    post_id: 15
-  },
-  {
     comment: 'Nam tristique tortor eu pede.',
     user_id: 4,
     post_id: 16
@@ -154,16 +144,6 @@ const commentdata = [
     post_id: 18
   },
   {
-    comment: 'Proin eu mi. Nulla ac enim.',
-    user_id: 4,
-    post_id: 10
-  },
-  {
-    comment: 'Sed ante. Vivamus tortor.',
-    user_id: 7,
-    post_id: 5
-  },
-  {
     comment: 'Aliquam quis turpis eget elit sodales scelerisque.',
     user_id: 10,
     post_id: 1
@@ -172,11 +152,6 @@ const commentdata = [
     comment: 'Donec quis orci eget orci vehicula condimentum.',
     user_id: 3,
     post_id: 19
-  },
-  {
-    comment: 'Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
-    user_id: 5,
-    post_id: 3
   },
   {
     comment: 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.',
@@ -242,20 +217,10 @@ const commentdata = [
     post_id: 19
   },
   {
-    comment: 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
-    user_id: 10,
-    post_id: 1
-  },
-  {
     comment:
       'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.',
     user_id: 2,
     post_id: 19
-  },
-  {
-    comment: 'Proin risus. Praesent lectus.',
-    user_id: 10,
-    post_id: 1
   },
   {
     comment: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus.',
