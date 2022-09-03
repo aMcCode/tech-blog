@@ -15,8 +15,9 @@
     <textarea class="no-border" id="post-content" name="content" readonly>{{post.content}}</textarea>
   </div>
     {{> comments-info}}
-  <div>
+    {{#if (doesNotContain post.comments authName)}}
     <button id="add-new-comment-btn" type="button" class="new-comment-btn" post-id='{{post.id}}'>Add New Comment</button>
+    {{/if}}
   </div>
 </form>
 
