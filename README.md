@@ -15,6 +15,8 @@
 ## Description
 This app is a CMS-style blog site similar to a Wordpress site. Developers can post blog messages and other developers can comment on those posts. The app follows the MVC paradigm and uses Handlebars.js and Sequelize.
 
+The live application is deployed at https://code-tech-blog.herokuapp.com/.
+
 ![Alt text](./public/images/AppScreenShot1.gif?raw=true "Application Screenshot - Dashboard")
 ![Alt text](./public/images/AppScreenShot2.gif?raw=true "Application Screenshot - Edit Post Interface")
 ![Alt text](./public/images/AppScreenShot3.gif?raw=true "Application Screenshot - Add Comments Interface")
