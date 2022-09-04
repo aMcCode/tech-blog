@@ -23,7 +23,7 @@ async function updateComment(event) {
       if (response.ok) {
         //console.log("comment edited");
       } else {
-        alert(response.statusText);
+        document.location.replace('/login');
       }
 
   };
