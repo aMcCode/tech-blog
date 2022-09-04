@@ -1,0 +1,12 @@
+{{#if posts.length}}
+
+<h3>Your Posts</h3>
+{{#each posts as |post|}}
+  <ul class="list">
+    <li class="list-item">{{> edit-post-info post }}</li>
+  </ul>
+{{/each}}
+
+{{/if}}
+
+<button type="submit" class="new-post-btn"><a class="link" href="/dashboard/new-post">Add New Post</a></button>

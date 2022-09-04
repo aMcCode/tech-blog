@@ -1,0 +1,32 @@
+<div class="u-full-width">
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+
+<form id="comment-form">
+    <h3 id="comments-h3">Add Comments</h3>
+  <div>
+    <p>post created by {{post.user.username}} on {{format_date post.created_at}}</p>
+    <label for="title">Title</label>
+    <input class="no-border" type="text" id="title" name="title" value="{{post.title}}" readonly/>
+  </div>
+  <div>
+    <label for="post-content">Content</label>
+    <textarea class="no-border" id="post-content" name="content" readonly>{{post.content}}</textarea>
+  </div>
+    {{> comments-info}}
+    {{#if (doesNotContain post.comments authName)}}
+    <button id="add-new-comment-btn" type="button" class="new-comment-btn" post-id='{{post.id}}'>Add New Comment</button>
+    {{/if}}
+  </div>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+<script src="/js/addComment.js"></script>
+<script src="/js/deleteComment.js"></script>
+<script src="/js/editComment.js"></script>
+
+{{!-- would be good to figure out pagination for comments. --}}
