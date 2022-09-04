@@ -111,7 +111,7 @@ router.post('/logout', (req, res) => {
       });
     }
     else {
-      res.status(404).end();
+      res.status(404).json({message: "Your session timed out. Please log in."});
     }
 });
 

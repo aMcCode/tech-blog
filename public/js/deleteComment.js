@@ -19,7 +19,7 @@ async function newFormHandler(event) {
     if (response.ok) {
       document.location.replace('/post/'+postId);
     } else {
-      alert(response.statusText);
+      document.location.replace('/login');
     }
   };
   
